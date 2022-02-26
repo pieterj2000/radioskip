@@ -1,11 +1,9 @@
 <template>
 
 <div v-for="zender in zenders">
-    <input type="radio" v-model="radio" name="radiozenders" :value="zender" @change="$emit('zenderChange', zender)">{{zender.naam}}
+    <label><input type="radio" v-model="radio" name="radiozenders" :value="zender" @change="$emit('zenderChange', zender)">{{zender.naam}}</label>
 
 </div>
-
-<h1>{{radio.naam}}</h1>
 
 </template>
 
@@ -36,7 +34,14 @@ export default defineComponent({
             radio: {}
         }
     },
-    emits: ['zenderChange']
+    emits: ['zenderChange'],
+    methods: {
+        volgende() {
+            let index = this.zenders.indexOf(this.radio);
+            this.radio = this.zenders[(index + 1) % this.zenders.length];
+            this.$emit('zenderChange', this.radio);
+        }
+    }
 })
 </script>
 
