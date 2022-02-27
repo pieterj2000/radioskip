@@ -25,6 +25,7 @@
     <li>Huidige nummer met API van zenders</li>
     <li>de hele 'player' in een los component stoppen?</li>
     <li>Opmaak/css, radiologo's etc..</li>
+    <li>Mediakeys (Volgende radio en pauze?)</li>
     <li>Waveform van afgelopen x minuten met buffer die geanalyseerd wordt mooi canvas toevoegen</li>
     <li>Die fourieranalyse en daar dan mee trainen of er commercial is of niet</li>
     <li>resultaat van reclameanalyse toevoegen aan canvas</li>
