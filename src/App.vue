@@ -9,6 +9,7 @@
         @canplaythrough="skipMandatoryCommercial"></audio>
 
 <button @click="this.$refs.radiolist.volgende()">volgende radio</button>
+<button @click="this.$refs.radiolist.random()">random radio</button>
 <button @click="skipMandatoryCommercial($event, true)">skip verplichte commercial begin stream</button>
 <button @click="this.$refs.audio.pause()">pauze</button>
 <button @click="this.$refs.audio.play()">play</button>

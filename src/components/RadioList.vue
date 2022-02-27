@@ -40,6 +40,11 @@ export default defineComponent({
             let index = this.zenders.indexOf(this.radio);
             this.radio = this.zenders[(index + 1) % this.zenders.length];
             this.$emit('zenderChange', this.radio);
+        },
+        random() {
+            let index = Math.floor(Math.random() * this.zenders.length);
+            this.radio = this.zenders[index];
+            this.$emit('zenderChange', this.radio);
         }
     }
 })
