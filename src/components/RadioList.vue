@@ -29,7 +29,7 @@ export default defineComponent({
                 { naam: "KINK", url: "https://25353.live.streamtheworld.com/KINKAAC.aac" , api: "" },
                 { naam: "Radio 5", url: "https://icecast.omroep.nl/radio5-bb-mp3" , api: "" },
                 { naam: "Soul Radio", url: "https://25273.live.streamtheworld.com/SOULRADIOAAC.aac" , api: "" },
-                { naam: "Arrow Classic Roock", url: "https://stream.player.arrow.nl/arrow", api: ""  }
+                { naam: "Arrow Classic Rock", url: "https://stream.player.arrow.nl/arrow", api: ""  }
             ],
             radio: {}
         }
