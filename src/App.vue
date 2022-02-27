@@ -39,6 +39,8 @@
     <li><input type="checkbox" disabled>misschien al die fancy meuk achter een vinkje doen zodat het geen performence kost als je niet gebruikt</li>
     <li><input type="checkbox" disabled>een 'add'/zoek op spotify knop  :)</li>
     <li><input type="checkbox" disabled>misschien toevoegen dat hij niet bij alle zenders begincommercial probeert te skippen</li>
+    <li><input type="checkbox" disabled>Netjes alles in componenten stoppen zover logisch is</li>
+    <li><input type="checkbox" disabled>Die console en settimeout weghalen als mogelijk is in mounted in app.vue</li>
 </ul>
 
 </template>
