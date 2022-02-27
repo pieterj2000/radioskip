@@ -38,6 +38,7 @@
     <li><input type="checkbox" disabled>oude trainwaarden inzien en wijzigen, of nieuwe toevoegen met bovenstaande functionaliteit</li>
     <li><input type="checkbox" disabled>misschien al die fancy meuk achter een vinkje doen zodat het geen performence kost als je niet gebruikt</li>
     <li><input type="checkbox" disabled>een 'add'/zoek op spotify knop  :)</li>
+    <li><input type="checkbox" disabled>misschien toevoegen dat hij niet bij alle zenders begincommercial probeert te skippen</li>
 </ul>
 
 </template>
