@@ -14,23 +14,23 @@ export default defineComponent({
     data() {
         return {
             zenders: [
-                { naam: "Radio538", url: "https://25633.live.streamtheworld.com/RADIO538AAC.aac" , api: },
-                { naam: "SkyRadio", url: "https://22343.live.streamtheworld.com/SKYRADIOAAC.aac" , api: },
-                { naam: "Radio10", url: "https://25683.live.streamtheworld.com/RADIO10AAC.aac" , api: },
-                { naam: "Veronica", url: "https://25693.live.streamtheworld.com/VERONICAAAC.aac" , api: },
-                { naam: "Q-Music", url: "https://23823.live.streamtheworld.com/QMUSICNL.mp3" , api: },
-                { naam: "Radio 1", url: "https://icecast.omroep.nl/radio1-bb-mp3" , api: },
-                { naam: "Radio 2", url: "https://icecast.omroep.nl/radio2-bb-mp3" , api: },
-                { naam: "Sublime", url: "https://25323.live.streamtheworld.com/SUBLIMEAAC.aac" , api: },
-                { naam: "SlamFM", url: "https://25533.live.streamtheworld.com/SLAM_MP3.mp3" , api: },
-                { naam: "3FM", url: "https://icecast.omroep.nl/3fm-bb-mp3" , api: },
-                { naam: "FunX", url: "https://icecast.omroep.nl/funx-sb-mp3" , api: },
-                { naam: "100% NL", url: "https://25333.live.streamtheworld.com/100PNL_MP3.mp3" , api: },
-                { naam: "KINK", url: "https://25353.live.streamtheworld.com/KINKAAC.aac" , api: },
-                { naam: "Radio 5", url: "https://icecast.omroep.nl/radio5-bb-mp3" , api: },
-                { naam: "Soul Radio", url: "https://25273.live.streamtheworld.com/SOULRADIOAAC.aac" , api: },
-                { naam: "Arrow Classic Roock", url: "https://stream.player.arrow.nl/arrow", api:  }
-            , api: ],
+                { naam: "Radio538", url: "https://25633.live.streamtheworld.com/RADIO538AAC.aac" , api: "" },
+                { naam: "SkyRadio", url: "https://22343.live.streamtheworld.com/SKYRADIOAAC.aac" , api: "" },
+                { naam: "Radio10", url: "https://25683.live.streamtheworld.com/RADIO10AAC.aac" , api: "" },
+                { naam: "Veronica", url: "https://25693.live.streamtheworld.com/VERONICAAAC.aac" , api: "" },
+                { naam: "Q-Music", url: "https://23823.live.streamtheworld.com/QMUSICNL.mp3" , api: "" },
+                { naam: "Radio 1", url: "https://icecast.omroep.nl/radio1-bb-mp3" , api: "" },
+                { naam: "Radio 2", url: "https://icecast.omroep.nl/radio2-bb-mp3" , api: "" },
+                { naam: "Sublime", url: "https://25323.live.streamtheworld.com/SUBLIMEAAC.aac" , api: "" },
+                { naam: "SlamFM", url: "https://25533.live.streamtheworld.com/SLAM_MP3.mp3" , api: "" },
+                { naam: "3FM", url: "https://icecast.omroep.nl/3fm-bb-mp3" , api: "" },
+                { naam: "FunX", url: "https://icecast.omroep.nl/funx-sb-mp3" , api: "" },
+                { naam: "100% NL", url: "https://25333.live.streamtheworld.com/100PNL_MP3.mp3" , api: "" },
+                { naam: "KINK", url: "https://25353.live.streamtheworld.com/KINKAAC.aac" , api: "" },
+                { naam: "Radio 5", url: "https://icecast.omroep.nl/radio5-bb-mp3" , api: "" },
+                { naam: "Soul Radio", url: "https://25273.live.streamtheworld.com/SOULRADIOAAC.aac" , api: "" },
+                { naam: "Arrow Classic Roock", url: "https://stream.player.arrow.nl/arrow", api: ""  }
+            ],
             radio: {}
         }
     },

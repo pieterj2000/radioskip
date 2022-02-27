@@ -29,6 +29,7 @@
     <li>Waveform van afgelopen x minuten met buffer die geanalyseerd wordt mooi canvas toevoegen</li>
     <li>Die fourieranalyse en daar dan mee trainen of er commercial is of niet</li>
     <li>resultaat van reclameanalyse toevoegen aan canvas</li>
+    <li>volume opslaan zodat hij niet bij refresh weer reset</li>
     <li>manier van trainen toevoegen en opslag (localstorage?)</li>
     <li>toevoegen dat hij ook handelt automatisch (bijvoorbeeld popup met 3seconde delay)</li>
     <li>super fancy dat je op de mooie canvas met de waveform ook kan schuiven en kan luisteren en repeat en dergelijke</li>
