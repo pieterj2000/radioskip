@@ -2,47 +2,21 @@
 
 <RadioList ref="radiolist" @zenderChange="newZender" />
 
-<h1>{{zender.naam}}</h1>
-
 
 <audio ref="audio" :src="zender.url" autoplay
         @canplaythrough="skipMandatoryCommercial"></audio>
 
-<button @click="this.$refs.radiolist.volgende()">volgende radio</button>
-<button @click="this.$refs.radiolist.random()">random radio</button>
 <button @click="skipMandatoryCommercial($event, true)">skip verplichte commercial begin stream</button>
-<button @click="this.$refs.audio.pause()">pauze</button>
-<button @click="this.$refs.audio.play()">play</button>
-<button @click="newZender(this.zender)">skip naar live (reset)</button>
+<button @click="audio.pause()">pauze</button>
+<button @click="audio.play()">play</button>
+<button @click="newZender(zender)">skip naar live (reset)</button>
 
-<input type="range" id="volume" name="volume" min="0" max="100" v-model="volume" @input="this.$refs.audio.volume = this.volume / 100.0">
+<input type="range" id="volume" name="volume" min="0" max="100" v-model="volume" @input="audio.volume = volume / 100.0">
 
 <label><input type="checkbox" v-model="waveformcheck" />show waveform</label>
 <WaveForm v-if="waveformcheck" />
 
-<hr style="margin-top: 100px">
-<em>Todo:</em>
-<ul>
-    <li><input type="checkbox" disabled checked>Werkend krijgen</li>
-    <li><input type="checkbox" disabled>Huidige nummer met API van zenders</li>
-    <li><input type="checkbox" disabled>de hele 'player' in een los component stoppen?</li>
-    <li><input type="checkbox" disabled>Opmaak/css, radiologo's etc..</li>
-    <li><input type="checkbox" disabled checked>Mediakeys (Volgende radio en pauze?)</li>
-    <li><input type="checkbox" disabled>Mediakeys <a href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API">metadata toevoegen</a> (zender, huidige nummer en artiest?)</li>
-    <li><input type="checkbox" disabled>Waveform van afgelopen x minuten met buffer die geanalyseerd wordt mooi canvas toevoegen</li>
-    <li><input type="checkbox" disabled>Die fourieranalyse en daar dan mee trainen of er commercial is of niet</li>
-    <li><input type="checkbox" disabled>resultaat van reclameanalyse toevoegen aan canvas</li>
-    <li><input type="checkbox" disabled>volume opslaan zodat hij niet bij refresh weer reset</li>
-    <li><input type="checkbox" disabled>manier van trainen toevoegen en opslag (localstorage?)</li>
-    <li><input type="checkbox" disabled>toevoegen dat hij ook handelt automatisch (bijvoorbeeld popup met 3seconde delay)</li>
-    <li><input type="checkbox" disabled>super fancy dat je op de mooie canvas met de waveform ook kan schuiven en kan luisteren en repeat en dergelijke</li>
-    <li><input type="checkbox" disabled>oude trainwaarden inzien en wijzigen, of nieuwe toevoegen met bovenstaande functionaliteit</li>
-    <li><input type="checkbox" disabled>misschien al die fancy meuk achter een vinkje doen zodat het geen performence kost als je niet gebruikt</li>
-    <li><input type="checkbox" disabled>een 'add'/zoek op spotify knop  :)</li>
-    <li><input type="checkbox" disabled>misschien toevoegen dat hij niet bij alle zenders begincommercial probeert te skippen</li>
-    <li><input type="checkbox" disabled>Netjes alles in componenten stoppen zover logisch is</li>
-    <li><input type="checkbox" disabled>Die console en settimeout weghalen als mogelijk is in mounted in app.vue</li>
-</ul>
+<ToDo />
 
 </template>
 
@@ -50,16 +24,20 @@
 import { defineComponent } from 'vue'
 
 import RadioList from "./components/RadioList.vue"
+import ToDo from "./components/ToDo.vue"
 import WaveForm from "./components/WaveForm.vue"
 
+import type { Zender } from "./interfaces"
+
 export default defineComponent({
-    components: { RadioList, WaveForm },
+    components: { RadioList, ToDo, WaveForm },
     data() {
         return {
-            zender: {},
+            zender: {} as Zender,
             skippedcommercial: false,
             volume: 100,
-            waveformcheck: false
+            waveformcheck: false,
+            audio: {} as HTMLAudioElement
         }
     },
     computed: {
@@ -73,19 +51,21 @@ export default defineComponent({
 
         });
         navigator.mediaSession.setActionHandler('pause', () => {
-            this.$refs.audio.pause();
+            this.audio.pause();
         });
         // navigator.mediaSession.setActionHandler('previoustrack',  () => {
 
         // });
         navigator.mediaSession.setActionHandler('nexttrack',  () => {
-            this.$refs.radiolist.volgende();
+            (this.$refs.radiolist as typeof RadioList).volgende();
         });
+        this.audio = this.$refs.audio as HTMLAudioElement;
+
     },
     methods: {
-        newZender(zender) {
+        newZender(zender: Zender) {
             this.zender = zender;
-            this.$refs.audio.load();
+            this.audio.load();
             this.skippedcommercial = false;
 
             navigator.mediaSession.metadata = new MediaMetadata({
@@ -96,9 +76,9 @@ export default defineComponent({
 
         },
 
-        skipMandatoryCommercial(event, manual = false) {
+        skipMandatoryCommercial(event: Event, manual = false) {
             if(!this.skippedcommercial || manual){
-                setTimeout(() => this.$refs.audio.currentTime = 30, 1000);
+                setTimeout(() => this.audio.currentTime = 30, 1000);
                 this.skippedcommercial = true;
             }
         }
