@@ -23,6 +23,7 @@
     <li><input type="checkbox" disabled>misschien toevoegen dat hij niet bij alle zenders begincommercial probeert te skippen</li>
     <li><input type="checkbox" disabled>Netjes alles in componenten stoppen zover logisch is</li>
     <li><input type="checkbox" disabled>Die console en settimeout weghalen als mogelijk is in mounted in app.vue</li>
+    <li><input type="checkbox" disabled>Spotify als radio toevoegen... pokke veel moeite wss maar zou wel echt gaaf zijn</li>
 </ul>
 
 </template>
