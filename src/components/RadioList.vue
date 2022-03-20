@@ -2,13 +2,23 @@
 
 <div v-for="zender in zenders">
     <label><input type="radio" v-model="radio" name="radiozenders" :value="zender" @change="$emit('zenderChange', zender)">{{zender.naam}}</label>
-
 </div>
+
+
+<h1>{{radio.naam}}</h1>
+
+
+<button @click="volgende()">volgende radio</button>
+<button @click="random()">random radio</button>
+
+
 
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+
+import type { Zender } from "../interfaces"
 
 export default defineComponent({
     data() {
@@ -30,12 +40,13 @@ export default defineComponent({
                 { naam: "Radio 5", url: "https://icecast.omroep.nl/radio5-bb-mp3" , api: "" },
                 { naam: "Soul Radio", url: "https://25273.live.streamtheworld.com/SOULRADIOAAC.aac" , api: "" },
                 { naam: "Arrow Classic Rock", url: "https://stream.player.arrow.nl/arrow", api: ""  }
-            ],
-            radio: {}
+            ] as unknown as [Zender],
+            radio: {} as Zender
         }
     },
     emits: ['zenderChange'],
     methods: {
+        
         volgende() {
             let index = this.zenders.indexOf(this.radio);
             this.radio = this.zenders[(index + 1) % this.zenders.length];
