@@ -17,7 +17,8 @@
 
 <input type="range" id="volume" name="volume" min="0" max="100" v-model="volume" @input="this.$refs.audio.volume = this.volume / 100.0">
 
-
+<label><input type="checkbox" v-model="waveformcheck" />show waveform</label>
+<WaveForm v-if="waveformcheck" />
 
 <hr style="margin-top: 100px">
 <em>Todo:</em>
@@ -49,14 +50,16 @@
 import { defineComponent } from 'vue'
 
 import RadioList from "./components/RadioList.vue"
+import WaveForm from "./components/WaveForm.vue"
 
 export default defineComponent({
-    components: { RadioList },
+    components: { RadioList, WaveForm },
     data() {
         return {
             zender: {},
             skippedcommercial: false,
-            volume: 100
+            volume: 100,
+            waveformcheck: false
         }
     },
     computed: {
