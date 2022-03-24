@@ -8,8 +8,12 @@
     <li><input type="checkbox" disabled>Huidige nummer met API van zenders</li>
     <li><input type="checkbox" disabled>de hele 'player' in een los component stoppen?</li>
     <li><input type="checkbox" disabled>Opmaak/css, radiologo's etc..</li>
+    <li><input type="checkbox" disabled>Progressive web app van maken (installeerbaar dus)</li>
     <li><input type="checkbox" disabled checked>Mediakeys (Volgende radio en pauze?)</li>
+    <li><input type="checkbox" disabled>Mediakeys mobiel werkend krijgen</li>
+    <li><input type="checkbox" disabled checked>mooie favicon doen</li>
     <li><input type="checkbox" disabled>Mediakeys <a href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API">metadata toevoegen</a> (zender, huidige nummer en artiest?)</li>
+    <li><input type="checkbox" disabled>Mediakeys metadata laten werken mobiel (en in PWA indien het dat al is)</li>
     <li><input type="checkbox" disabled>Waveform van afgelopen x minuten met buffer die geanalyseerd wordt mooi canvas toevoegen</li>
     <li><input type="checkbox" disabled>Die fourieranalyse en daar dan mee trainen of er commercial is of niet</li>
     <li><input type="checkbox" disabled>resultaat van reclameanalyse toevoegen aan canvas</li>
