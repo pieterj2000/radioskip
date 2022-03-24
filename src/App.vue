@@ -4,7 +4,8 @@
 
 
 <audio ref="audio" :src="zender.url" autoplay
-        @canplaythrough="skipMandatoryCommercial"></audio>
+        @canplaythrough="skipMandatoryCommercial"
+        crossorigin="anonymous"></audio>
 
 <button @click="skipMandatoryCommercial($event, true)">skip verplichte commercial begin stream</button>
 <button @click="audio.pause()">pauze</button>
@@ -14,7 +15,7 @@
 <input type="range" id="volume" name="volume" min="0" max="100" v-model="volume" @input="audio.volume = volume / 100.0">
 
 <label><input type="checkbox" v-model="waveformcheck" />show waveform</label>
-<WaveForm v-if="waveformcheck" />
+<WaveForm :audio="audio" v-if="waveformcheck" />
 
 <ToDo />
 
