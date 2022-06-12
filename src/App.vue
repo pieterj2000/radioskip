@@ -1,6 +1,6 @@
 <template>
 
-<RadioList ref="radiolist" @zenderChange="newZender" />
+<RadioList ref="radiolist"  @zenderChange="newZender" />
 
 
 <audio ref="audio" :src="zender.url" autoplay
@@ -12,10 +12,10 @@
 <button @click="audio.play()">play</button>
 <button @click="newZender(zender)">skip naar live (reset)</button>
 
-<input type="range" id="volume" name="volume" min="0" max="100" v-model="volume" @input="audio.volume = volume / 100.0">
+<input type="range" id="volume" name="volume" min="0" max="100" v-model="volume" @input="changeVolume(volume)">
 
 <label><input type="checkbox" v-model="waveformcheck" />show waveform</label>
-<WaveForm :audio="audio" v-if="waveformcheck" />
+<WaveForm :audio="audio" :audioctx="audioctx" :rawoutput="track" v-if="waveformcheck" />
 
 <ToDo />
 
@@ -38,7 +38,10 @@ export default defineComponent({
             skippedcommercial: false,
             volume: 100,
             waveformcheck: false,
-            audio: {} as HTMLAudioElement
+            audio: {} as HTMLAudioElement,
+            audioctx: new AudioContext(),
+            gainnode: {} as GainNode,
+            track: {} as AudioNode,
         }
     },
     computed: {
@@ -62,8 +65,18 @@ export default defineComponent({
         });
         this.audio = this.$refs.audio as HTMLAudioElement;
 
+        
+        //this.track = this.audioctx.createMediaElementSource(this.audio as HTMLAudioElement);
+        this.track = this.audioctx.createMediaElementSource(this.audio as HTMLAudioElement);
+        this.gainnode = this.audioctx.createGain();
+        this.track.connect(this.gainnode).connect(this.audioctx.destination);
+
     },
     methods: {
+        changeVolume(volume: number) {
+            this.gainnode.gain.setValueAtTime(volume / 100.0, this.audioctx.currentTime);
+        },
+
         newZender(zender: Zender) {
             this.zender = zender;
             this.audio.load();

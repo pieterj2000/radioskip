@@ -9,6 +9,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@types/audioworklet": "^0.0.26",
     "vue": "^3.2.31",
     "vue-window-size": "^1.1.2"
   },
