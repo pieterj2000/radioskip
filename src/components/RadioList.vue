@@ -40,7 +40,8 @@ export default defineComponent({
                 { naam: "Radio 5", url: "https://icecast.omroep.nl/radio5-bb-mp3" , api: "" },
                 { naam: "Soul Radio", url: "https://25273.live.streamtheworld.com/SOULRADIOAAC.aac" , api: "" },
                 { naam: "Arrow Classic Rock", url: "https://stream.player.arrow.nl/arrow", api: ""  },
-                { naam: "Studio040 ", url: "https://stream.studio040.nl/studio040.mp3", api: ""  }
+                { naam: "Studio040", url: "https://stream.studio040.nl/studio040.mp3", api: ""  },
+                { naam: "StuBru", url: "https://25643.live.streamtheworld.com/STUDIO_BRUSSEL_128.mp3?dist=belgiefm", api: "" }
             ] as unknown as [Zender],
             radio: {} as Zender
         }
