@@ -1,9 +1,10 @@
 <template>
 
-<div v-for="zender in zenders">
+<ul>
+<li v-for="zender in zenders">
     <label><input type="radio" v-model="radio" name="radiozenders" :value="zender" @change="$emit('zenderChange', zender)">{{zender.naam}}</label>
-</div>
-
+</li>
+</ul>
 
 <h1>{{radio.naam}}</h1>
 
@@ -64,5 +65,10 @@ export default defineComponent({
 </script>
 
 <style>
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
 
 </style>
