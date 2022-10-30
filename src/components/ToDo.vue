@@ -7,7 +7,7 @@
     <li><input type="checkbox" disabled checked>Werkend krijgen</li>
     <li><input type="checkbox" disabled checked>Studio040 toevoegen</li>
     <li><input type="checkbox" disabled checked>StuBru toevoegen</li>
-    <li><input type="checkbox" disabled>NPO 4 NPO 5 en classicnl toevoegen</li>
+    <li><input type="checkbox" disabled checked>NPO 4 NPO 5 en classicnl toevoegen</li>
     <li><input type="checkbox" disabled>Huidige nummer met API van zenders</li>
     <li><input type="checkbox" disabled>de hele 'player' in een los component stoppen?</li>
     <li><input type="checkbox" disabled>Opmaak/css, radiologo's etc..</li>
