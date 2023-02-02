@@ -29,7 +29,7 @@ export default defineComponent({
                 { naam: "SkyRadio", url: "https://22343.live.streamtheworld.com/SKYRADIOAAC.aac" , api: "" },
                 { naam: "Radio10", url: "https://25683.live.streamtheworld.com/RADIO10AAC.aac" , api: "" },
                 { naam: "Veronica", url: "https://25693.live.streamtheworld.com/VERONICAAAC.aac" , api: "" },
-                { naam: "Q-Music", url: "https://23823.live.streamtheworld.com/QMUSICNL.mp3" , api: "" },
+                { naam: "Q-Music", url: "https://icecast-qmusicnl-cdp.triple-it.nl/Qmusic_nl_live_high.aac" , api: "" },
                 { naam: "Radio 1", url: "https://icecast.omroep.nl/radio1-bb-mp3" , api: "" },
                 { naam: "Radio 2", url: "https://icecast.omroep.nl/radio2-bb-mp3" , api: "" },
                 { naam: "Sublime", url: "https://25323.live.streamtheworld.com/SUBLIMEAAC.aac" , api: "" },
