@@ -44,7 +44,7 @@ export default defineComponent({
                 { naam: "Arrow Classic Rock", url: "https://stream.player.arrow.nl/arrow", api: ""  },
                 { naam: "classicnl", url: "https://22323.live.streamtheworld.com/CLASSICFMAAC.aac", api: ""  },
                 { naam: "Studio040", url: "https://stream.studio040.nl/studio040.mp3", api: ""  },
-                { naam: "StuBru", url: "https://f8e0a3fc90d142e68cd424a56b220f0d.mediatailor.us-east-1.amazonaws.com/v1/manifest/7c1b669ef36eb1e845184b6345b06cd264fc4eb7/5bzs1cW9_vrt-audio-only-v1/629c1e87-5d5b-4f1d-acde-8170cec39b1f/1.m3u8", api: "" }
+                { naam: "StuBru", url: "https://vrt.streamabc.net/vrt-studiobrussel-mp3-128-4409118?sABC=652r4o59%230%2307p71277082967n35719rs7q4s2rq719%23&aw_0_1st.playerid=&amsparams=playerid:;skey:1697532761", api: "" }
             ] as unknown as [Zender],
             radio: {} as Zender
         }
