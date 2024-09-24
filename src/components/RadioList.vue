@@ -39,7 +39,7 @@ export default defineComponent({
                 { naam: "Radio 5", url: "https://icecast.omroep.nl/radio5-bb-mp3" , api: "" },
                 { naam: "FunX", url: "https://icecast.omroep.nl/funx-sb-mp3" , api: "" },
                 { naam: "100% NL", url: "https://25333.live.streamtheworld.com/100PNL_MP3.mp3" , api: "" },
-                { naam: "KINK", url: "https://25353.live.streamtheworld.com/KINKAAC.aac" , api: "" },
+                { naam: "KINK", url: "https://27783.live.streamtheworld.com/KINK.mp3" , api: "" },
                 { naam: "Soul Radio", url: "https://25273.live.streamtheworld.com/SOULRADIOAAC.aac" , api: "" },
                 { naam: "Arrow Classic Rock", url: "https://stream.player.arrow.nl/arrow", api: ""  },
                 { naam: "classicnl", url: "https://22323.live.streamtheworld.com/CLASSICFMAAC.aac", api: ""  },
